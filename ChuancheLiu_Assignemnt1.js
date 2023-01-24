@@ -26,18 +26,19 @@ function studentWithHighestMarks(array) {
         
     }
 
-console.log(studentWithHighestMarks(studentList));
+// console.log(studentWithHighestMarks(studentList));
+studentWithHighestMarks(studentList)
 
 //Q2
 numArray = [20, -2, 4, -11, 0, 25]
 function minimumValue(array){
-    let highest = array.reduce((acc, cV) => {
+    let lowest = array.reduce((acc, cV) => {
         if(acc < cV){
             cV = acc
         }
         return cV
     }, +Infinity)
-    return console.log(highest)
+    return console.log(lowest)
 }
 
 minimumValue(numArray);
