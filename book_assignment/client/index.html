@@ -13,15 +13,27 @@
         crossorigin="anonymous"></script>
 
     <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <button class="btn btn-primary">
             <a class="navbar-brand" href="author.html">AUTHORS</a>
         </button>
 
-    </nav>
+    </nav> -->
+
+    <div >
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Books</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="author.html">Authors</a>
+            </li>
+        </ul>
+    </div>
 
     <div class="container">
         <h1 class="m-4 text-center">List of books</h1>
@@ -41,31 +53,34 @@
 
         <hr>
 
-        <form onsubmit="submitForm(event)">
-            <div class="form-group m-4">
-                <label for="Title">
-                    Title
-                </label>
-                <input id="title" type="text" id="Title" class="form-control" placeholder="Enter Book Title Here!">
-            </div>
-            <div class="form-group m-4">
-                <label for="Description">
-                    Description
-                </label>
-                <textarea id="description" class="form-control" id="Description" rows="3"></textarea>
-            </div>
+        <div class="book-form-container">
+            <h1>BOOKS</h1>
+            <form onsubmit="submitForm(event)">
+                <div class="form-group m-4">
+                    <label for="Title">
+                        Title
+                    </label>
+                    <input id="title" type="text" id="Title" class="form-control" placeholder="Enter Book Title Here!">
+                </div>
+                <div class="form-group m-4">
+                    <label for="Description">
+                        Description
+                    </label>
+                    <textarea id="description" class="form-control" id="Description" rows="3"></textarea>
+                </div>
 
-            <div class="m-4">
-                <label for="Author">Authors</label>
-                <select name="Author" id="authorList" class="form-select" onchange="selectedAuthor(event)">
-                    <option selected>Open this menu</option>
-                </select>
-            </div>
+                <div class="m-4">
+                    <label for="Author">Authors</label>
+                    <select name="Author" id="authorList" class="form-select" onchange="selectedAuthor(event)">
+                        <option selected>Open this menu</option>
+                    </select>
+                </div>
 
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary mt-4 ">Submit</button>
-            </div>
-        </form>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary mt-4 ">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
