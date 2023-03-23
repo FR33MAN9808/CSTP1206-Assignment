@@ -46,14 +46,14 @@ const updateBookUI = (data) => {
     console.log(data, "INCOMING VALUE");
 
     for (let i = 0; i < data.length; i++) {
-        let authorName = parseAuthorName(data[i].author, authors);
+        //let authorName = parseAuthorName(data[i].author, authors);
         let id = data[i]._id;
         bookTable.innerHTML += `
             <tr>
                 <td>${data[i]._id}</td>
                 <td>${data[i].title}</td>
                 <td>${data[i].description}</td>
-                <td>${authorName}</td>
+                <td>${data[i].author}</td>
                 <td><button class="btn btn-danger" onclick="deleteBook('${id}')">Delete</button></td>
             </tr>
         `
@@ -77,8 +77,8 @@ const deleteBook = (bookId) => {
 
 const parseAuthorName = (authorId, authorList) => {
     console.log(authorList)
+    console.log(authorList[0].name)
     let author = authorList.find((author) => author._id === authorId);
-    console.log(author.name)
     return author.name;
 }
 
